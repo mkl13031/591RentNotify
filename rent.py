@@ -105,7 +105,7 @@ def search(filter_params=None, sort_params=None, want_page=1):
       row =  f'&firstRow={page*30}&totalRows={total_count}'
       house_list.extend(data['data']['data'])
       # print('house_len: ', len(house_list))
-      if(len(house_list)>=int(total_count)):
+      if(len(house_list)>=int(total_count.replace(',',''))):
         break
 
       # 隨機 delay 一段時間
